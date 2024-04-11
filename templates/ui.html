@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>SE-ER</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            color: #fff;
+            background:#020039;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            align-items: center;
+            padding: 10px 170px;
+            background: #071736;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+        }
+        .logo{
+            color: #71BBBF;
+            font-weight: 600;
+            font-size: 2.4rem;
+        }
+
+        img{
+          transform: translateY(70px);
+          width: 900px;
+          height: 600px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:40px;
+        }
+        .footer{
+            transform: translateY(60px);
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <header>
+        <center><a class="logo">SE-ER LIVE STREAMING</a></center>
+    </header>
+
+    <section class="col-sm " >
+        <img src="{{ url_for('webapp') }}">
+
+        <footer class="footer">
+            <div class="footer-text">
+              <p>Copyright &copy; 2023 by SE-ER | All Rights Reserved</p>
+        </div>
+        </footer>
+    </section>
+    </center>
+</body>
+</html>

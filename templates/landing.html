@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEER</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
+    .hero{
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(12, 3, 51, 0.9),rgba(12, 3, 51, 0.5));
+        position: relative;
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #071736; 
+        box-shadow: 0 3px 4px rgba(0,0,0,0.9);
+        color: white;
+    }
+    nav .logo{
+        width: 80px;
+    }
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        margin-left: 40px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        transition: .4s;
+    }
+    nav ul li a.active {
+    color: #1aabff;
+    }
+    nav ul li a:hover{
+        color: #1aabff;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .content{
+        text-align: center;
+    }
+    .content h1{
+        font-size: 200px;
+        color: #fff;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+    .content h1:hover{
+        -webkit-text-stroke: 2px #fff;
+        color: transparent;
+    }
+    .content a{
+        background:white;
+        text-decoration: none;
+        display: inline-block;
+        color: #071736;     
+        font-size: 24px;
+        padding: 14px 70px;
+        border-radius: 50px;
+        margin-top: 20px;
+        transition: .4s;
+    }
+    .content a:hover{
+        background: transparent;
+        color: white;
+        border: 3px solid #fff;
+    }
+    .back-video{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    @media (min-aspect-ratio: 16/9){
+        .back-video{
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media (max-aspect-ratio: 16/9){
+        .back-video{
+            width: auto;
+            height: 100%;
+        }
+    }
+    section{
+        padding: 90px 17%;
+        background:#020039;
+    }
+    .home{
+        width: 100%;
+        min-height: 90vh;
+        display: grid;
+        grid-template-columns: repeat(2,5fr);
+        grid-gap: 1.5rem;
+        align-items: center;
+        color: white;
+    }
+    .home-img img{
+        max-width: 100%;
+        height: 600px;
+        height: auto;
+        transform: translateX(150px);
+    }
+    .home-text{
+        transform: translateY(50px);
+    }
+    .home-text h1{
+        font-size: 2rem;
+        color: white;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+    .home-text p{
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+    .features .center-text{
+            text-align: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+        .column img{
+            aspect-ratio: 3/2;
+            width: 100%;
+        }
+    .contacts .center-text{
+        text-align: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        color: white;
+    }
+    .footer{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline class="back-video" id="video">
+            <source src="../static/files/bg.mp4" type="video/mp4">
+        </video>
+        <nav class="sticky">
+            <img width="64" height="64" src="../static/images/seerr.png" alt="drone-takeoff--v1" class="logo">
+            <ul>
+                <li><a href="#">Home</li></a>
+                <li><a href="#features">Features</li></a>
+                <li><a href="/webcam" target="_blank">Live Feed</li></a>
+                <li><a href="#contact">Contact</li></a>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>S E E R</h1>
+            <a href="#home">Explore</a>
+        </div>
+    </div>
+    <!-- HOME -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1><span>DEVELOPMENT OF SE-ER</span>: SEARCH, EVALUATE, EVACUATE, AND RESCUE SMART DRONE IN NASUGBU BATANGAS
+            </h1>
+            <p>Drowning is a serious public health problem across the world, with an estimated 236,000 drowning deaths per year. It is one of the major causes of death for children under the age of five. According to the World Health Organization, drowning accounts for 7% of all injury-related deaths, and is the third most common cause of unintentional injury death worldwide.</p>
+        </div>
+        <div class="home-img">
+            <img src="../static/images/1.png" alt="">
+        </div>
+    </section>
+
+
+    <!--Features-->
+    <section class="features" id="features" style="color: white">
+        <div class="center-text">
+            <h2><span>Features</span></span></h2>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="../static/images/f1.jpg" style="width:100%">
+              <center><div>Advanced Imaging and Sensing Technology</div></center>
+            </div>
+            <div class="column">
+              <img src="../static/images/f2.jpeg" style="width:100%">
+              <center><div>AI-Powered Analysis and Decision-Making</div></center>
+            </div>
+            <div class="column">
+              <img src="../static/images/f3.jpg" style="width:100%">
+              <center><div>Precise Position Hold with Environmental Adaptation</div></center>
+            </div>
+        </div>
+        <br><br>
+    <!--ABOUT YOLOV8-->
+        <div class="center-text">
+            <h2><span>About YOLOv8</span></span></h2>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="../static/images/y1.jpg" style="width:100%">
+              <center><div>Advanced Classification and Detection with Adaptive Data Augmentation</div></center>
+            </div>
+            <div class="column">
+              <img src="../static/images/y1.png" style="width:100%">
+              <center><div>Contextual Scene Understanding</div></center>
+            </div>
+            <div class="column">
+              <img src="../static/images/y3.png" style="width:100%">
+              <center><div>Adaptive Confidence Thresholding</div></center>
+            </div>
+        </div>
+    </section>
+
+
+     <!--CONTACTS-->
+     <section class="contacts" id="contact">
+        <div class="center-text">
+            <h2>Emergency Contacts</h2>
+        </div>
+        <center>
+        <div style="color: white">
+            <br>
+           <h1>Nasugbu PS</h1>
+            0927 500 1199<br>
+            0998 598 5698<br><br>
+
+            <h1>Bfp Nasugbu Batangas</h1>
+            (043) 416 2110<br>
+            0906 958 2122<br><br>
+
+            <h1>Nasugbu, Batangas - Municipal Disaster Risk Reduction and Management Office</h1>
+            (043) 740 4643<br>
+            0917 508 9911<br>
+            0919 629 2599<br><br>
+
+            <h1>Philippine Red Cross - Batangas Chapter Nasugbu Branch</h1>
+            (043) 702 2356 <br>
+            0917 133 1427<br>
+            0998 950 9663<br><br>
+        </div>
+        </center>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+          <p>Copyright &copy; 2023 by SE-ER | All Rights Reserved</p>
+    </div>
+
+    <script>
+        // Get video element
+        var video = document.getElementById('video');
+        
+        // Get the live feed section
+        var liveFeedSection = document.querySelector('.live-feed');
+
+        // Function to check if an element is in viewport
+        function isInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        // Function to pause or play video based on section visibility
+        function toggleVideoPlayback() {
+            if (isInViewport(liveFeedSection)) {
+                // Pause video if live feed section is in viewport
+                video.pause();
+            } else {
+                // Play video if live feed section is not in viewport
+                video.play();
+            }
+        }
+        // Check video playback on page load
+        toggleVideoPlayback();
+        // Check video playback on scroll
+        window.addEventListener('scroll', function() {
+            toggleVideoPlayback();
+        });
+
+    </script>
+</body>
+</html>
